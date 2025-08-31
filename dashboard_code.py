@@ -3,35 +3,7 @@ import streamlit as st
 # Page setup
 st.set_page_config(page_title="Vishan's Dashboard", layout="centered")
 
-# Create tabs
-tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 CAPM Calculator"])
-
-# Tab 1: Home
-with tab1:
-    st.title("👋 Hi Vishan")
-    st.write("This is the beginning to the end.")
-
-# Tab 2: CAPM Calculator
-with tab3:
-    st.subheader("📈 CAPM Expected Return Calculator")
-
-    stock = st.text_input("Enter the name of the stock:")
-    beta = st.number_input("Enter the stock beta:", value=1.0)
-    risk_free_rate = st.number_input("Risk-free rate of return (%)", value=2.0)
-    market_return = st.number_input("Expected market return (%)", value=8.0)
-
-    if stock:
-        expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
-        st.success(f"Using the CAPM formula, the expected return on **{stock}** is **{round(expected_return, 2)}%**")
-        st.markdown("""
-        import streamlit as st
-
-import streamlit as st
-
-# Page setup
-st.set_page_config(page_title="China at Night Dashboard", layout="centered")
-
-# Custom CSS for full neon city background and bold styling
+# Custom CSS for neon city background and bold styling
 st.markdown("""
     <style>
         html, body, .stApp {
@@ -52,47 +24,4 @@ st.markdown("""
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #00ffff;
-            font-weight: 800;
-            text-shadow: 0 0 8px #00ffff;
-        }
-
-        .stTabs [role="tablist"] {
-            background-color: transparent;
-            border-bottom: 2px solid #00ffff;
-        }
-
-        .stTabs [role="tab"] {
-            color: #ffffff !important;
-            background-color: rgba(0, 255, 255, 0.1);
-            border: 1px solid #00ffff;
-            margin-right: 0.5rem;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-        }
-
-        .stTabs [aria-selected="true"] {
-            background-color: #00ffff !important;
-            color: #000000 !important;
-            font-weight: bold;
-            box-shadow: 0 0 10px #00ffff;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Tabs
-tab1, tab2 = st.tabs(["🏙️ Home", "📈 Market"])
-
-# Tab 1: Home
-with tab1:
-    st.title("🌃 Welcome to the Neon Skyline")
-    st.write("This dashboard is inspired by the electric pulse of China at night—where innovation meets illumination.")
-
-# Tab 2: Market
-with tab2:
-    st.subheader("💱 Global Market Signals")
-    st.write("Explore currency trends, trading insights, and the rhythm of the new world order.")
-
-# Footer
-st.markdown("---")
-st.caption("Built with ❤️ using Streamlit • Styled by the skyline • Powered by vision")
+            color
