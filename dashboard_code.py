@@ -45,7 +45,7 @@ st.markdown("""
 
         .block-container {
             background-color: rgba(0, 0, 0, 0.85);
-            padding: 2rem;
+    
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
@@ -95,3 +95,4 @@ with tab2:
 # Footer
 st.markdown("---")
 st.caption("Built with ❤️ using Streamlit • Styled for the future • FOREX ready")
+
