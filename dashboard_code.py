@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Vishan's Dashboard", layout="centered")
 
 # Create tabs
-tab1, tab2, tab3 = st.tabs(["🏠 Home", "📚 Learn Together", "📈 CAPM Calculator"])
+tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 CAPM Calculator"])
 
 # Tab 1: Home
 with tab1:
@@ -23,25 +23,29 @@ with tab3:
     if stock:
         expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
         st.success(f"Using the CAPM formula, the expected return on **{stock}** is **{round(expected_return, 2)}%**")
-
-st.markdown("""
+        st.markdown("""
     <style>
         html, body, .stApp {
-            background-color: #000000;
+            background-image: url('YOUR_IMAGE_URL_HERE');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #ffffff;
         }
-        header, .viewerBadge_container__1QSob {
-            background-color: #000000 !important;
+        .block-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
         }
         .stTabs [role="tablist"] {
-            background-color: #000000;
+            background-color: transparent;
             border-bottom: 1px solid #ffffff;
         }
         .stTabs [role="tab"] {
             color: #ffffff !important;
-            background-color: #000000;
+            background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid #ffffff;
-            border-radius: 0;
             margin-right: 0.5rem;
             padding: 0.5rem 1rem;
         }
