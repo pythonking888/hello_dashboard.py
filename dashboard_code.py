@@ -76,8 +76,3 @@ st.write("Welcome to your global trading command center.")
 
 st.markdown("### 💱 Currency Insights")
 st.write("Explore exchange rates, market trends, and trading signals.")
-
-# Footer
-st.markdown("---")
-st.caption("Built with ❤️ using Stream
-
