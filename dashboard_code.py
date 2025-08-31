@@ -78,3 +78,35 @@ with tab2:
 # Footer
 st.markdown("---")
 st.caption("Built with ❤️ using Streamlit • Styled in black & white")
+st.markdown("""
+    <style>
+        html, body, .stApp {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        header, .viewerBadge_container__1QSob {
+            background-color: #000000 !important;
+        }
+        .stTabs [role="tablist"] {
+            background-color: #000000;
+            border-bottom: 1px solid #ffffff;
+        }
+        .stTabs [role="tab"] {
+            color: #ffffff !important;
+            background-color: #000000;
+            border: 1px solid #ffffff;
+            border-radius: 0;
+            margin-right: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+        .stTabs [aria-selected="true"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            font-weight: bold;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffffff;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
