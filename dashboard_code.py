@@ -59,16 +59,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create tabs
-tab1, tab2 = st.tabs(["🏠 Home", "📈 CAPM Calculator"])
+tab1, tab2 = st.tabs(["📈 CAPM Calculator"])
 
-# Tab 1: Home
-with tab1:
-    st.title("👋 Hi Vishan")
-    st.write("This is the beginning to the end.")
-    st.markdown("---")
-    st.caption("Styled by the skyline • Powered by vision")
 
-# Tab 2: CAPM Calculator
+
+# Tab 1: CAPM Calculator
 with tab2:
     st.subheader("📈 CAPM Expected Return Calculator")
 
@@ -80,3 +75,4 @@ with tab2:
     if stock:
         expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
         st.success(f"Using the CAPM formula, the expected return on **{stock}** is **{round(expected_return, 2)}%**")
+
