@@ -26,63 +26,25 @@ with tab3:
 
 import streamlit as st
 
-# Page configuration
-st.set_page_config(
-    page_title="FOREX Dashboard",
-    layout="centered",
-    initial_sidebar_state="collapsed"
-)
-
-# Custom CSS to set background image and dark overlay
-st.markdown("""
-    <style>
-        .stApp {
-            background-image: url("https://copilot.microsoft.com/th/id/BCO.b0fb40e7-2e58-4f3b-b681-83f774415895.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #ffffff;
-        }
-        .block-container {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #00ffcc;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Main content
-st.title("🌍 FOREX Market Dashboard")
-st.write("Welcome to your global trading command center.")
-
-st.markdown("### 💱 Currency Insights")
-st.write("Explore exchange rates, market trends, and trading signals.")
-import streamlit as st
-
 # Page setup
-st.set_page_config(page_title="Styled Dashboard", layout="centered")
+st.set_page_config(page_title="Monochrome Dashboard", layout="centered")
 
-# Custom CSS for dark background and white tabs
+# Custom CSS for black background and white tabs
 st.markdown("""
     <style>
         .stApp {
-            background-color: #0f0f0f;
+            background-color: #000000;
             color: #ffffff;
         }
         .stTabs [role="tablist"] {
-            background-color: #1a1a1a;
-            border-radius: 8px;
-            padding: 0.5rem;
+            background-color: #000000;
+            border-bottom: 1px solid #ffffff;
         }
         .stTabs [role="tab"] {
             color: #ffffff !important;
-            background-color: #333333;
-            border: 1px solid #555555;
-            border-radius: 6px;
+            background-color: #000000;
+            border: 1px solid #ffffff;
+            border-radius: 0;
             margin-right: 0.5rem;
             padding: 0.5rem 1rem;
         }
@@ -90,6 +52,12 @@ st.markdown("""
             background-color: #ffffff !important;
             color: #000000 !important;
             font-weight: bold;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffffff;
+        }
+        .block-container {
+            padding: 2rem;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -99,11 +67,14 @@ tab1, tab2 = st.tabs(["🏠 Home", "📈 Forex"])
 
 # Tab 1: Home
 with tab1:
-    st.title("Welcome to the Styled Dashboard")
-    st.write("This tab has a dark background and white-highlighted tabs.")
+    st.title("🖤 Monochrome Dashboard")
+    st.write("Welcome to your black & white command center.")
 
 # Tab 2: Forex
 with tab2:
     st.subheader("FOREX Market Overview")
-    st.write("Here you can explore currency trends and trading insights.")
+    st.write("Explore currency trends and trading insights in minimalist style.")
 
+# Footer
+st.markdown("---")
+st.caption("Built with ❤️ using Streamlit • Styled in black & white")
