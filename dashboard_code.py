@@ -11,22 +11,7 @@ with tab1:
     st.title("👋 Hi Vishan")
     st.write("This is the beginning to the end.")
 
-# Tab 2: Learn Together
-with tab2:
-    st.subheader("Should we learn together?")
-    response = st.radio(
-        "Choose your answer:",
-        ["Yes, let's do it!", "Maybe later", "Not today"]
-    )
-
-    if response == "Yes, let's do it!":
-        st.success("Awesome! Let's dive into something exciting together. 🚀")
-    elif response == "Maybe later":
-        st.info("No worries—I'll be here when you're ready. 😊")
-    elif response == "Not today":
-        st.warning("Totally fine. Everyone needs a break sometimes. 💤")
-
-# Tab 3: CAPM Calculator
+# Tab 2: CAPM Calculator
 with tab3:
     st.subheader("📈 CAPM Expected Return Calculator")
 
@@ -76,3 +61,49 @@ st.write("Welcome to your global trading command center.")
 
 st.markdown("### 💱 Currency Insights")
 st.write("Explore exchange rates, market trends, and trading signals.")
+import streamlit as st
+
+# Page setup
+st.set_page_config(page_title="Styled Dashboard", layout="centered")
+
+# Custom CSS for dark background and white tabs
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        .stTabs [role="tablist"] {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 0.5rem;
+        }
+        .stTabs [role="tab"] {
+            color: #ffffff !important;
+            background-color: #333333;
+            border: 1px solid #555555;
+            border-radius: 6px;
+            margin-right: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+        .stTabs [aria-selected="true"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            font-weight: bold;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Tabs
+tab1, tab2 = st.tabs(["🏠 Home", "📈 Forex"])
+
+# Tab 1: Home
+with tab1:
+    st.title("Welcome to the Styled Dashboard")
+    st.write("This tab has a dark background and white-highlighted tabs.")
+
+# Tab 2: Forex
+with tab2:
+    st.subheader("FOREX Market Overview")
+    st.write("Here you can explore currency trends and trading insights.")
+
