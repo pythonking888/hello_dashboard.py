@@ -1,0 +1,6 @@
+stock = input('Please enter the name of the stock: ')
+beta = float(input('Enter the stock beta: '))
+risk_free_rate = float(input('Enter the risk-free rate of return in %: '))
+market_return = float(input('Enter the expected broad market rate of return in % (Ex: S&P500): '))
+expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
+print('Using the CAPM formula, the expected return on {} stock = {}%'.format(stock, round(expected_return, 2)))
