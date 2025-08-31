@@ -3,7 +3,7 @@ import streamlit as st
 # Page setup
 st.set_page_config(page_title="Vishan's Dashboard", layout="centered")
 
-# Custom CSS for neon city background and bold styling
+# Custom CSS for full neon city background and bold styling
 st.markdown("""
     <style>
         html, body, .stApp {
@@ -16,8 +16,13 @@ st.markdown("""
             font-family: 'Segoe UI', sans-serif;
         }
 
+        header, .viewerBadge_container__1QSob, .main, .block-container {
+            background-color: rgba(0, 0, 0, 0.85) !important;
+            background-image: none !important;
+            border: none !important;
+        }
+
         .block-container {
-            background-color: rgba(0, 0, 0, 0.85);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
