@@ -38,7 +38,3 @@ with tab3:
     if stock:
         expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
         st.success(f"Using the CAPM formula, the expected return on **{stock}** is **{round(expected_return, 2)}%**")
-
-# Footer
-st.markdown("---")
-st.caption("Built with ❤️ using Streamlit")
